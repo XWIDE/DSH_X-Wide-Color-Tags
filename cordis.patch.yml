@@ -1,0 +1,7 @@
+# 装载行（bundle patch，随包发布）。装好本包后由 profile 的 dsh.profile.bundles 自动应用。
+# ⚠️ entry id = 设置页命名空间，改名会丢已写覆盖项，请勿随意改。
+- insert:
+    - id: xwide-color-tags
+      name: dsh-xwide-color-tags
+      config:
+        enabled: true

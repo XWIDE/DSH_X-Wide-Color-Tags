@@ -1,0 +1,60 @@
+{
+  "name": "dsh-xwide-color-tags",
+  "version": "0.1.1",
+  "description": "X-Wide 会话色彩标签 · 给工作区侧栏的每个会话上颜色：右键会话菜单一排色板（4 预设 + 彩虹自绘 HSV 取色 + 清除），会话行左端小圆点开浮动弹板；弹板里右键＝取消颜色、自定义块右键＝删除该色、一键「恢复默认」清空我的颜色。走宿主官方注册口（sidebar.workspaces.session.menu.item / ctx.contextMenus），零运行时依赖，只写 localStorage（xwcolor.*），不与 @michengai/dsh-codex-ui 共用存储键与槽位 order。",
+  "license": "MIT",
+  "author": {
+    "name": "XWIDE",
+    "url": "https://github.com/XWIDE"
+  },
+  "homepage": "https://github.com/XWIDE/DSH_X-Wide-Color-Tags",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XWIDE/DSH_X-Wide-Color-Tags.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XWIDE/DSH_X-Wide-Color-Tags/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "!**/*.bak-*",
+    "!data/*.log"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "color-tags",
+    "sidebar",
+    "session",
+    "xwide"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check lib/client.js"
+  },
+  "dsh": {
+    "plugin": true,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
