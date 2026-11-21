@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2（2026-11-22）
+
+说明文档补真机截图，代码零改动。
+
+- README 顶部新增「界面实拍」两图：已上色侧栏（`assets/session-list.png`）、圆点弹板（`assets/palette.png`）。
+- 新增 `screenshots.json`（市场详情页读这个显示截图，相对路径写法＝探针推荐形态）。
+- `package.json` 的 `files` 白名单加 `assets/` 与 `screenshots.json`，npm 包里带图文档。
+- `lib/client.js` 未改动（20,894 B / sha1 前缀 `BCA6DC8D` 不变）。
+
 ## 0.1.1（2026-11-22）
 
 弹板化 + 右键机制统一 + 自绘取色面板。
